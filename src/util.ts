@@ -22,6 +22,8 @@ export async function cleanupTemp(dir: string) {
   await Deno.remove(dir, { recursive: true }).catch(() => {});
 }
 
+export async function* emptyDirEntryIterable(): AsyncIterable<Deno.DirEntry> {}
+
 export async function pathExists(path: string): Promise<boolean> {
   try {
     await Deno.stat(path);

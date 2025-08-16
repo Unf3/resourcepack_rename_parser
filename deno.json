@@ -6,6 +6,7 @@
   },
   "imports": {
     "@std/csv": "jsr:@std/csv@^1.0.6",
+    "@std/log": "jsr:@std/log@^0.224.14",
     "@std/path": "jsr:@std/path@^1.1.2",
     "adm-zip": "npm:adm-zip@^0.5.16",
     "jsonpath-plus": "npm:jsonpath-plus@^10.3.0"
