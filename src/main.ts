@@ -12,7 +12,7 @@ import { getModelString } from "./model.ts";
 import { loadConfig } from "./config.ts";
 import { LangFile, Columns, Entry as RenameEntry } from "./types.ts";
 
-const config = await loadConfig("../config.json");
+const config = await loadConfig(path.join(Deno.cwd(), "config.json"));
 
 const csvColumns: string[] = config.columns;
 const entries: RenameEntry[] = [];
