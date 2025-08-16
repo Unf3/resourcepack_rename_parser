@@ -5,7 +5,7 @@
     "item_name",
     "custom_name"
   ],
-  "outputFileName": "output/renames.csv",
+  "outputFileName": "renames.csv",
   "langFile": "en_us.json",
   "duplicateKeyFilter": ["model", "custom_name"] 
 }

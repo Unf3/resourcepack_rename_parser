@@ -99,5 +99,15 @@ const csvData: string = stringify(entries, {
   columns: csvColumns,
 });
 
-await Deno.writeTextFile(config.outputFileName, csvData);
+const outputDirPath = path.join(Deno.cwd(), "output");
+const outputFilePath = path.join(outputDirPath, config.outputFileName);
+if (!(await pathExists(outputDirPath))) {
+  logger.warn("Output directory not found. Creating it...");
+  await Deno.mkdir(outputDirPath);
+  await Deno.create(outputFilePath);
+} else if (!(await pathExists(outputFilePath))) {
+  await Deno.create(outputFilePath);
+}
+
+await Deno.writeTextFile(outputFilePath, csvData);
 logger.info(`✅ Results saved to ${config.outputFileName}`);
