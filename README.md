@@ -1,4 +1,4 @@
-# Resourcepack table generator
+# Resourcepack rename parser
 This project allows you to get all of the item renames from a resourcepack into a csv file.
 
 ## Usage
