@@ -1,5 +1,6 @@
 {
   "columns": [
+    "pack_name", 
     "model",
     "item_name",
     "custom_name"
